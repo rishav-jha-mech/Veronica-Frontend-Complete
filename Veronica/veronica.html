@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veronica | The Online Web Scraper</title>
+  <link rel="stylesheet" href="veronica.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  
+    <!--NAVBAR COMPONENT-->
+    <div class="navbar">
+      <div class="inner">
+          <h2>Veronica</h2> 
+          <div id="nav_links" class="navLinks">
+              <a onclick="link" id="gotopage" class="" href="../index.html">Home</a>
+              <a onclick="link" id="gotopage" class="" style="color: aqua;" href="../Veronica/veronica.html">Scrap</a>
+              <a onclick="link" id="gotopage" class="" href="../Veronica Media Scrap/comingsoonmedia.html">Media Scrap</a>
+              <a onclick="link" id="gotopage" class="" href="https://github.com/rishav-jha-mech/Veronica">Contribute</a>
+              <a onclick="link" id="gotopage" class="" href="../Founder/comingsoonfounder.html">Founder</a>
+          </div>
+          <div class="hiddenbutts">
+          <i onclick="show()" id="ham"   class="fas fa-bars"></i>
+          <i onclick="hide()" id="cross" class="fas fa-times"></i>
+          </div>
+      </div>
+    </div>
+  <!--NAVBAR COMPONENT-->
+
+
+  <!-- MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN -->
+ <form id="bgone" action="" method="post">
+    <div id="mains" class="main">
+            <div class="make">
+    <button class="backtoup" onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fas fa-chevron-up"></i> </button>
+
+        <h1>Enter Your <span class="block2">URL Here</span></h1> 
+            <div class="forum">
+                <input name="url" type="url" placeholder="https://something.com" required>
+                <a href="../WellDone/welldone.html"> <button id="scrappy" type="button" > SCRAP </button>  </a>
+            </div>
+            <h2>Select which element you want to scrap <span id="block1"> (choose only one) </span> </h2>
+    <div class="table">
+
+      <div class="col col1">
+        <div class="row">
+          <h6 class="rowhead" style="position: relative;top: -20px;text-align: center;font-weight: 500;color: #ff156f;font-size: 16px;padding-top: 8px;">TEXTS</h6>
+            <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+                <input class="form-check-input" name="h1" type="checkbox" id="flexSwitchCheckChecked">
+                <label class="form-check-label" for="flexSwitchCheckChecked">h1 <span class="abr"> (text) </span> </label>
+            </div>
+        
+            <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+                <input class="form-check-input" name="h2" type="checkbox" id="flexSwitchCheckChecked" >
+                <label class="form-check-label" for="flexSwitchCheckChecked">h2 <span class="abr"> (text) </span> </label>
+            </div>
+            <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+                <input class="form-check-input" name="h3" type="checkbox" id="flexSwitchCheckChecked" >
+                <label class="form-check-label" for="flexSwitchCheckChecked">h3 <span class="abr"> (text) </span> </label>
+            </div>
+            <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+                <input class="form-check-input" name="h4" type="checkbox" id="flexSwitchCheckChecked" >
+                <label class="form-check-label" for="flexSwitchCheckChecked">h4 <span class="abr"> (text) </span></label>
+            </div>
+            <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+                <input class="form-check-input" name="h5" type="checkbox" id="flexSwitchCheckChecked" >
+                <label class="form-check-label" for="flexSwitchCheckChecked">h5 <span class="abr"> (text) </span></label>
+            </div>
+            <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+                <input class="form-check-input" name="h6" type="checkbox" id="flexSwitchCheckChecked" >
+                <label class="form-check-label" for="flexSwitchCheckChecked">h6 <span class="abr"> (text) </span> </label>
+            </div>
+            <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+                <input class="form-check-input" name="p" type="checkbox" id="flexSwitchCheckChecked" >
+                <label class="form-check-label" for="flexSwitchCheckChecked">p <span class="abr"> (text) </span> </label>
+            </div>
+        </div>
+                
+        <div class="row">
+          <h6 class="rowhead" style="position: relative;top: -20px;text-align: center;font-weight: 500;color: #ff156f;font-size: 16px;padding-top: 8px;">URL & TAGS</h6>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="an" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" style="text-transform: none;" for="flexSwitchCheckChecked">a <span class="abr"> (name) </span> </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="al" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" style="text-transform: none;" for="flexSwitchCheckChecked">a <span class="abr"> (url) </span> </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="img" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" for="flexSwitchCheckChecked">Image <span class="abr"> (url) </span> </label>
+          </div>
+          
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+            <input class="form-check-input" name="divtext" type="checkbox" id="flexSwitchCheckChecked" >
+            <label class="form-check-label" for="flexSwitchCheckChecked">div <span class="abr"> (text) </span> </label>
+        </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="divtag" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" for="flexSwitchCheckChecked"> Div <span class="abr"> (tag) </span>  </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+            <input class="form-check-input" name="alltags" type="checkbox" id="flexSwitchCheckChecked" >
+            <label class="form-check-label" for="flexSwitchCheckChecked"> All Tags</label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="title" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" for="flexSwitchCheckChecked">Title <span class="abr"> (name) </span> </label>
+          </div>
+        </div>
+      </div>
+      <div class="col col2">               
+        <div class="row">
+          <h6 class="rowhead" style="position: relative;top: -20px;text-align: center;font-weight: 500;color: #ff156f;font-size: 16px;padding-top: 8px;">TAGS & LETTERS</h6>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="html" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" style="text-transform: none;" for="flexSwitchCheckChecked">HTML <span class="abr"> (TAG) </span> </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="body" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" style="text-transform: none;" for="flexSwitchCheckChecked">BODY <span class="abr"> (TAG) </span> </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+            <input class="form-check-input" name="class" type="checkbox" id="flexSwitchCheckChecked" >
+            <label class="form-check-label" for="flexSwitchCheckChecked">CLASS <span class="abr"> (ALL) </span></label>
+        </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+            <input class="form-check-input" name="id" type="checkbox" id="flexSwitchCheckChecked" >
+            <label class="form-check-label" for="flexSwitchCheckChecked"> ID <span class="abr"> (ALL) </span> </label>
+        </div>
+        <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+          <input class="form-check-input" name="strong" type="checkbox" id="flexSwitchCheckChecked" >
+          <label class="form-check-label" for="flexSwitchCheckChecked"> STRONG <span class="abr"> (bold) </span> </label>
+        </div>
+        <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+          <input class="form-check-input" name="em" type="checkbox" id="flexSwitchCheckChecked" >
+          <label class="form-check-label" for="flexSwitchCheckChecked"> EM  <span class="abr"> (italics) </span> </label>
+      </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="u" type="checkbox" id="flexSwitchCheckChecked" >
+              <label class="form-check-label" for="flexSwitchCheckChecked"> U <span class="abr"> (underline) </span> </label>
+          </div>
+        </div>
+        <div class="row">
+          <h6 class="rowhead" style="position: relative;top: -20px;text-align: center;font-weight: 500;color: #ff156f;font-size: 16px;padding-top: 8px;">Coming Soon</h6>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="linksrc" type="checkbox" id="flexSwitchCheckChecked" onclick="return false;"/>
+              <label class="form-check-label" for="flexSwitchCheckChecked">LINK <span class="abr"> (SRC) </span> </label>
+          </div>
+      
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="linktag" type="checkbox" id="flexSwitchCheckChecked"  onclick="return false;"/>
+              <label class="form-check-label" for="flexSwitchCheckChecked">LINK <span class="abr"> (TAG) </span> </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="stylesrc" type="checkbox" id="flexSwitchCheckChecked"  onclick="return false;"/>
+              <label class="form-check-label" for="flexSwitchCheckChecked">  STYLE <span class="abr"> (SRC) </span>  </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="styletag" type="checkbox" id="flexSwitchCheckChecked"  onclick="return false;"/>
+              <label class="form-check-label" for="flexSwitchCheckChecked">  STYLE <span class="abr"> (TAG) </span> </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="scriptsrc" type="checkbox" id="flexSwitchCheckChecked"  onclick="return false;"/>
+              <label class="form-check-label" for="flexSwitchCheckChecked"> SCRIPT <span class="abr"> (SRC) </span></label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="scripttag" type="checkbox" id="flexSwitchCheckChecked"  onclick="return false;"/>
+              <label class="form-check-label" for="flexSwitchCheckChecked">  SCRIPT <span class="abr"> (TAG) </span> </label>
+          </div>
+          <div style="display: flex;align-items: center;" class="form-check form-switch form-switch-lg">
+              <input class="form-check-input" name="imgadv" type="checkbox" id="flexSwitchCheckChecked"  onclick="return false;"/>
+              <label class="form-check-label" for="flexSwitchCheckChecked">IMAGE <span class="abr adv"> (ADV.) </span> </label>
+          </div>
+      </div>
+      </div>
+          </div>
+            </div>
+</form>   
+  
+    <div class="result">
+        <h1>Scrapped Material</h1>
+        <h2>   based on the options you selected here are the results </h2>
+        <div class="alignright"> <a href="#imagesgall"> <button type="button"> Images </button> </a> </div>
+        <div style="text-align: center;" class="results"> 
+          <div class="h1" style="padding: 10px;">
+          
+          <br>
+           <span class="h1a" style="font-weight: 700;font-size: 25px;"> H1 </span>
+          <br>
+          <br>
+          <span class="h1b" style="font-weight: 700;"> 
+             <br>  
+          </span>
+          <br>
+          
+          <br>
+          <span class="h1a" style="font-weight: 700;font-size: 25px;"> H1 </span>
+            <span class="h1c" style="font-weight: 700;text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+              H1 IS ABSENT
+            </span>
+                  </div>
+        <div class="h2" style="padding: 10px;" class="h2">
+        <!---->
+          <span class="h2a" style="font-weight: 700;font-size: 25px;">H2</span> 
+         <br>
+         <br>
+         <span class="h2b" style="font-weight: 700;"> 
+            <br>  
+         </span>
+         <br>
+         
+         <span class="h2a" style="font-weight: 700;font-size: 25px;">H2</span> 
+           <span class="h2c" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+             H2 IS ABSENT
+           </span>
+        <!---->
+        </div>
+
+        <div style="padding: 10px;" class="h3">
+        <!---->
+          <span class="h3a" style="font-weight: 700;font-size: 25px;">H3</span>
+         <br>
+         <br>
+         <span class="h3b" style="font-weight: 700;"> 
+            <br>  
+         </span>
+         <br>
+         
+         <span class="h3a" style="font-weight: 700;font-size: 25px;">H3</span>
+           <span class="h3c" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+             H3 IS ABSENT
+           </span>
+        </div>
+        
+        <div style="padding: 10px;" class="h4">
+        <!---->
+         <span class="h4a" style="font-weight: 700;font-size: 25px;">H4</span>
+        <br>
+        <br>
+        <span class="h4b" style="font-weight: 700;"> 
+           <br>  
+        </span>
+        <br>
+        
+        <span class="h4a" style="font-weight: 700;font-size: 25px;">H4</span>
+          <span class="h4c" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+            H4 IS ABSENT
+          </span>
+        <!---->
+      </div>
+      <div style="padding: 10px;" class="h5">
+        <span class="h5a" style="font-weight: 700;font-size: 25px;">H5 </span>
+       <br>
+       <br>
+       <span class="h5b" style="font-weight: 700;"> 
+          <br>  
+       </span>
+       <br>
+       
+       <span class="h5a" style="font-weight: 700;font-size: 25px;">H5 </span>
+         <span class="h5c" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+           H5 IS ABSENT
+         </span>
+      </div>
+      
+      <div style="padding: 10px;" class="h6">
+       <span class="h6a" style="font-weight: 700;font-size: 25px;">H6 </span>
+      <br>
+      <br>
+      <span class="h6b" style="font-weight: 700;"> 
+         <br>  
+      </span>
+      <br>
+      
+      <span class="h6a" style="font-weight: 700;font-size: 25px;">H6 </span>
+            <span class="h6c" style="text-align: center; display: block;font-weight: 700; font-size: 20px;margin: 25px 0 25px 0;">
+              H6 IS ABSENT
+            </span>
+        </div>
+        <div style="padding: 10px;" class="p">
+        <span class="pa" style="font-weight: 700;font-size: 25px;">P</span>
+        <br>
+        <br>
+        <span class="pb" style="font-weight: 500;font-size: 15px;"> 
+           <br>  
+        </span>
+        <br>
+        
+        <span class="pa" style="font-weight: 700;font-size: 25px;">P</span>
+          <span class="pc" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+            P IS ABSENT
+          </span>
+      </div>
+      <div style="padding: 10px;"  class="an">      
+        <span class="ana" style="font-weight: 700;font-size: 25px;">ANCHOR NAMES </span>
+      <br>
+      <br>
+      <span class="anb"> 
+          <br> 
+      </span>
+      <br>
+      
+      <span class="ana" style="font-weight: 700;font-size: 25px;">ANCHOR NAMES </span>
+        <span class="anc" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+          Anchor Name IS ABSENT
+        </span>
+    </div>
+    <div style="padding: 10px;" class="al">     
+      <span class="ala" style="font-weight: 700;font-size: 25px;">ANCHOR LINKS </span>
+      <br>
+      <br>
+      <span  style="font-weight: 700;"> 
+         <a class="alb" href="{{i}}" target="_blank">   </a> <br>  
+      </span>
+      <br>
+      
+      <span class="ala" style="font-weight: 700;font-size: 25px;">ANCHOR LINKS </span>
+        <span class="alc" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;">
+          Anchor Link Is Absent
+        </span>
+    </div>
+    <div style="padding: 10px;" class="image">       
+      <span class="imagea" style="font-weight: 700;font-size: 25px;">IMAGE LINK</span>
+      <br>
+      <br>
+      <span style="font-weight: 700;" > 
+         <a class="imageb" href="{{i}}" target="_blank"> </a> <br>  
+      </span>
+      <br>
+      
+      <span class="imagea" style="font-weight: 700;font-size: 25px;">IMAGE LINK</span>
+        <span class="imagec" style="text-align: center; display: block; font-size: 20px;margin: 25px 0 25px 0;text-transform: uppercase;">
+          Image Link Is Absent
+        </span>
+          </div>
+    <div style="padding: 10px;" class="div">
+      <span class="diva" style="font-weight: 700;font-size: 25px;">DIVISION TEXT </span>
+    <br>
+    <br>
+    <span class="divb" style="font-weight: 400;"> 
+        <br>  
+    </span>
+    <br>
+    
+    <span class="diva" style="font-weight: 700;font-size: 25px;">DIVISION TEXT</span><br><br>
+      <span class="divc" style="text-align: center;font-size: 20px;">
+        division TEXT Is Absent
+      </span>
+        </div>
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="divtag">
+      <span class="divtaga" style="font-weight: 700;font-size: 25px;">DIVISION TAG </span>
+    <br>
+    <br>
+    <span class="divtagb" style="font-size: 14px;font-weight: 400;"> 
+        <br> <br>  
+    </span>
+    <br>
+    
+    <span class="divtaga" style="font-weight: 700;font-size: 25px;">DIVISION TAG</span><br><br>
+      <span class="divtagc" style="text-align: center;font-size: 20px;">
+          Division TAG Is Absent
+      </span>
+        </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="alltag">
+      <span class="alltaga" style="font-weight: 700;font-size: 25px;"> ALL TAG NAMES </span>
+    <br>
+    <br>
+    <span class="alltagb" style="font-weight: 400;"> 
+        <br>  
+    </span>
+    <br>
+    
+    <span class="alltaga" style="font-weight: 700;font-size: 25px;">ALL TAG NAMES</span><br><br>
+      <span class="alltagc" style="text-align: center;font-size: 20px;">
+          All TAGs Names are Absent
+      </span>
+        </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+
+
+
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+            <div style="padding: 10px;" class="source">
+              <span class="sourcea" style="font-weight: 700;font-size: 25px;"> TITLE NAME </span>
+            <br>
+            <br>
+            <span class="sourceb" style="font-weight: 700;color: black;font-size: 22px;"> 
+                <br>  
+            </span>
+            <br>
+            
+            <span class="sourcea" style="font-weight: 700;font-size: 25px;">TITLE NAME</span><br><br>
+              <span class="sourcec" style="text-align: center;font-size: 20px;">
+                TITLE NAME IS Absent
+              </span>
+                        </div> 
+              <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="html">
+
+      <span class="htmla" style="font-weight: 700;font-size: 25px;">HTML TAG </span>
+    <br>
+    <br>
+    <span class="htmlb" style="font-weight: 400;"> 
+        <br>  
+    </span>
+    <br>
+    
+    <span class="htmla" style="font-weight: 700;font-size: 25px;">HTML TAG</span><br><br>
+      <span class="htmlc" style="text-align: center;font-size: 20px;">
+          HTML TAG Is Absent
+      </span>
+        </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="body">
+      <span class="bodya" style="font-weight: 700;font-size: 25px;">BODY TAG </span>
+    <br>
+    <br>
+    <span class="bodyb" style="font-weight: 400;"> 
+        <br>  
+    </span>
+    <br>
+    
+    <span class="bodya" style="font-weight: 700;font-size: 25px;">BODY TAG</span><br><br>
+      <span class="bodyc" style="text-align: center;font-size: 20px;">
+          body tag Is Absent
+      </span>
+        </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+      
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="class">
+      <span class="classa" style="font-weight: 700;font-size: 25px;">Class names </span>
+    <br>
+    <br>
+    <span class="classb" style="font-weight: 400;"> 
+        <br>  
+    </span>
+    <br>
+    
+    <span class="classa" style="font-weight: 700;font-size: 25px;">Class names</span><br><br>
+      <span class="classc" style="text-align: center;font-size: 20px;">
+          Class names are Absent
+      </span>
+        </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+      
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="id">
+      <span class="ida" style="font-weight: 700;font-size: 25px;">id names </span>
+    <br>
+    <br>
+    <span class="idb" style="font-weight: 400;"> 
+        <br>  
+    </span>
+    <br>
+    
+    <span class="ida" style="font-weight: 700;font-size: 25px;">id names</span><br><br>
+      <span class="idc" style="text-align: center;font-size: 20px;">
+          id names are Absent
+      </span>
+        </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE r67ktrl7BATCH ONE BATCH ONE BAr576l8l;6TCH ONE BATCH ONE BATCH ONE BATCH ONE Br565tl6tyl;tATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+      
+            <!--ONE BATCH ONE eu6rBATCH ONE BATCH ONEr65t7lt BATCH ONE BATCH ONE BATCH O57686y78lNE BATCH ONE BATCH ONE 5t6l8l6lo6yBATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="b">
+      <span class="ba" style="font-weight: 700;font-size: 25px;">STRONG TEXT </span>
+    <br>
+    <br>
+    <span class="bb" style="font-weight: 900;"> 
+        <br>  
+    </span>
+    <br>
+    
+    <span class="ba" style="font-weight: 700;font-size: 25px;">STRONG TEXT</span><br><br>
+      <span class="bc" style="text-align: center;font-size: 20px;">
+        STRONG TEXT IS Absent
+      </span>
+        </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+      
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="em">
+      <span class="ema" style="font-weight: 700;font-size: 25px;">Em text </span>
+    <br>
+    <br>
+    <span class="emb" style="font-weight: 400;font-style: italic;"> 
+        <br>  
+    </span>
+    <br>
+    
+    <span class="ema" style="font-weight: 700;font-size: 25px;">em text</span><br><br>
+      <span class="emc" style="text-align: center;font-size: 20px;">
+          em text Is Absent
+      </span>
+        </div> 
+      <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+      
+            <!--ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH ONE BATCH-->
+    <div style="padding: 10px;" class="u">
+      <span class="ua" style="font-weight: 700;font-size: 25px;">U TEXT </span>
+    <br>
+    <br>
+    <span class="ub" style="font-weight: 400;"> 
+       <u> </u><br>  
+    </span>
+    <br>
+    
+    <span class="ua" style="font-weight: 700;font-size: 25px;">U TEXT</span><br><br>
+      <span class="uc" style="text-align: center;font-size: 20px;">
+          U TEXT Is Absent
+      </span>
+        </div> 
+  </div>
+    </div>
+
+    
+    
+    <div class="imagesdisplayed">
+
+      <h1 id="imagesgall" class="heading-picture"> IMAGES FROM SCRAPING</h1> <br>
+      <p style="width: 100%;text-align: center;font-size: 22px;padding-bottom: 30px;font-weight: 700;color: blue;">Placeholder Images For Testing</p>
+      <br>
+      <a href="https://i.pinimg.com/280x280_RS/ac/41/c3/ac41c3824dca09aa60332eb6baf6f3b1.jpg" target="_blank"> <img src="https://i.pinimg.com/280x280_RS/ac/41/c3/ac41c3824dca09aa60332eb6baf6f3b1.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/c8/39/92/c839920d430783dd7e467a94b81db83f---reasons-why-dessin--reasons-why-fanart.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/c8/39/92/c839920d430783dd7e467a94b81db83f---reasons-why-dessin--reasons-why-fanart.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/ce/8d/f2/ce8df2ba74d6f79742ee00c239f01f19--katherine-langford-dylan-minnette.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/ce/8d/f2/ce8df2ba74d6f79742ee00c239f01f19--katherine-langford-dylan-minnette.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/f2/9c/8f/f29c8f5e6a55b45875ceb1b6a0794da6.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/f2/9c/8f/f29c8f5e6a55b45875ceb1b6a0794da6.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/c7/f9/a7/c7f9a7c515c8dfa11c2a5343b49617e0.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/c7/f9/a7/c7f9a7c515c8dfa11c2a5343b49617e0.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/ec/66/23/ec6623c69d858aac32e9f2d79db8e6d1.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/ec/66/23/ec6623c69d858aac32e9f2d79db8e6d1.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/41/3a/3b/413a3b979f05dd662f5fdbfbc0cbd436.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/41/3a/3b/413a3b979f05dd662f5fdbfbc0cbd436.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/3a/d9/91/3ad99134a2eb32828da4994ce97d8ffa--hanna--reasons-why--reasons-why-netflix-clay-and-hannah.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/3a/d9/91/3ad99134a2eb32828da4994ce97d8ffa--hanna--reasons-why--reasons-why-netflix-clay-and-hannah.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/69/0a/25/690a25a8c62014348218164c4197a181--katherine-langford-outfits-hannah-baker-outfits.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/69/0a/25/690a25a8c62014348218164c4197a181--katherine-langford-outfits-hannah-baker-outfits.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/88/6a/66/886a66b7670ed512482a71487f9d5966--karherine-langford-katherine-langford-hair.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/88/6a/66/886a66b7670ed512482a71487f9d5966--karherine-langford-katherine-langford-hair.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/42/87/24/428724440f03fd68101073a917520842--katherine-langford-hot-katherine-langford-photoshoot.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/42/87/24/428724440f03fd68101073a917520842--katherine-langford-hot-katherine-langford-photoshoot.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/02/31/fa/0231fa53a937ff97046997fe1ad15282.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/02/31/fa/0231fa53a937ff97046997fe1ad15282.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/f5/c0/77/f5c0772e81fa9926506b6780ab26f8f9.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/f5/c0/77/f5c0772e81fa9926506b6780ab26f8f9.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/60/d4/88/60d4883bf18418de28e958d34a972072.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/60/d4/88/60d4883bf18418de28e958d34a972072.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/eb/79/b1/eb79b1ee3daf83bf8886fcee2c329da5.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/eb/79/b1/eb79b1ee3daf83bf8886fcee2c329da5.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/9f/5e/f5/9f5ef58addb6e579a5e0ba2760c6fb05.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/9f/5e/f5/9f5ef58addb6e579a5e0ba2760c6fb05.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://i.pinimg.com/236x/30/99/db/3099dbaa58383c02b0d991bb6d5e5e06--katherine-langford-hot-sexy-love.jpg" target="_blank"> <img src="https://i.pinimg.com/236x/30/99/db/3099dbaa58383c02b0d991bb6d5e5e06--katherine-langford-hot-sexy-love.jpg" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/actress-emilia-clarke-attends-the-22nd-annual-screen-actors-guild-at-picture-id507615178?k=6&amp;m=507615178&amp;s=612x612&amp;w=0&amp;h=YQwmmUPyFWuoDrwiViTMHGAexlYMxyfsGnXUTMz-LT0=" target="_blank"> <img src="https://media.gettyimages.com/photos/actress-emilia-clarke-attends-the-22nd-annual-screen-actors-guild-at-picture-id507615178?k=6&amp;m=507615178&amp;s=612x612&amp;w=0&amp;h=YQwmmUPyFWuoDrwiViTMHGAexlYMxyfsGnXUTMz-LT0=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/actress-emilia-clarke-attends-the-premiere-of-hbos-game-of-thrones-6-picture-id520352718?k=6&amp;m=520352718&amp;s=612x612&amp;w=0&amp;h=zYws-3nFsHoGxsJykeohUfLnBZf6FqkgtbBMcKYR8VE=" target="_blank"> <img src="https://media.gettyimages.com/photos/actress-emilia-clarke-attends-the-premiere-of-hbos-game-of-thrones-6-picture-id520352718?k=6&amp;m=520352718&amp;s=612x612&amp;w=0&amp;h=zYws-3nFsHoGxsJykeohUfLnBZf6FqkgtbBMcKYR8VE=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176434925?k=6&amp;m=1176434925&amp;s=612x612&amp;w=0&amp;h=KIMhYBvyfgK53BcotxADbgcgcjdRQu6weea_W7nv-VI=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176434925?k=6&amp;m=1176434925&amp;s=612x612&amp;w=0&amp;h=KIMhYBvyfgK53BcotxADbgcgcjdRQu6weea_W7nv-VI=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-arrives-at-the-70th-emmy-awards-on-september-17-2018-in-picture-id1035177920?k=6&amp;m=1035177920&amp;s=612x612&amp;w=0&amp;h=JqYNgbjUrVcB85OMFiFJ3NRfrTTi2tbADmdW3_ClX7E=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-arrives-at-the-70th-emmy-awards-on-september-17-2018-in-picture-id1035177920?k=6&amp;m=1035177920&amp;s=612x612&amp;w=0&amp;h=JqYNgbjUrVcB85OMFiFJ3NRfrTTi2tbADmdW3_ClX7E=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-hbos-post-emmy-awards-reception-on-september-22-picture-id1170358678?k=6&amp;m=1170358678&amp;s=612x612&amp;w=0&amp;h=_LtJraXI9FCfOmoBvX1ZXhrpX2WX0_CRjrnuc99yPyQ=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-hbos-post-emmy-awards-reception-on-september-22-picture-id1170358678?k=6&amp;m=1170358678&amp;s=612x612&amp;w=0&amp;h=_LtJraXI9FCfOmoBvX1ZXhrpX2WX0_CRjrnuc99yPyQ=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176477740?k=6&amp;m=1176477740&amp;s=612x612&amp;w=0&amp;h=o8-0c_iZQUhQr-d88cuh068ofslSZaWDp13aUQ0EO1I=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176477740?k=6&amp;m=1176477740&amp;s=612x612&amp;w=0&amp;h=o8-0c_iZQUhQr-d88cuh068ofslSZaWDp13aUQ0EO1I=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-at-the-last-christmas-press-conference-at-the-four-on-picture-id1175843496?k=6&amp;m=1175843496&amp;s=612x612&amp;w=0&amp;h=D9l9C0w1sTyk5LfWf-bAWcpWT_gKzJ7T-mjjFUpD7Sc=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-at-the-last-christmas-press-conference-at-the-four-on-picture-id1175843496?k=6&amp;m=1175843496&amp;s=612x612&amp;w=0&amp;h=D9l9C0w1sTyk5LfWf-bAWcpWT_gKzJ7T-mjjFUpD7Sc=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-arrives-at-the-fashion-awards-2019-held-at-royal-albert-picture-id1191650326?k=6&amp;m=1191650326&amp;s=612x612&amp;w=0&amp;h=bKz0PRcqPwPALrSVnvfDIF0ONfQB6qCGhJTZFf4S3zw=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-arrives-at-the-fashion-awards-2019-held-at-royal-albert-picture-id1191650326?k=6&amp;m=1191650326&amp;s=612x612&amp;w=0&amp;h=bKz0PRcqPwPALrSVnvfDIF0ONfQB6qCGhJTZFf4S3zw=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-ee-british-academy-film-awards-2020-at-picture-id1203584482?k=6&amp;m=1203584482&amp;s=612x612&amp;w=0&amp;h=WbR4z74GqM9ILhJ5rjmcMkDe64KQPiZ9jIBIUFet594=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-ee-british-academy-film-awards-2020-at-picture-id1203584482?k=6&amp;m=1203584482&amp;s=612x612&amp;w=0&amp;h=WbR4z74GqM9ILhJ5rjmcMkDe64KQPiZ9jIBIUFet594=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/actors-jason-momoa-and-emilia-clarke-attend-hbos-official-emmy-after-picture-id181648760?k=6&amp;m=181648760&amp;s=612x612&amp;w=0&amp;h=SZ7AmOWPXRRBycCRnQNxdmXKtlZD8_cqNX5zR_1BQKI=" target="_blank"> <img src="https://media.gettyimages.com/photos/actors-jason-momoa-and-emilia-clarke-attend-hbos-official-emmy-after-picture-id181648760?k=6&amp;m=181648760&amp;s=612x612&amp;w=0&amp;h=SZ7AmOWPXRRBycCRnQNxdmXKtlZD8_cqNX5zR_1BQKI=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176477738?k=6&amp;m=1176477738&amp;s=612x612&amp;w=0&amp;h=YH-HuawQxS-JP7mzvmQQ1UuFUZHCFphRiu40X8_PGG8=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176477738?k=6&amp;m=1176477738&amp;s=612x612&amp;w=0&amp;h=YH-HuawQxS-JP7mzvmQQ1UuFUZHCFphRiu40X8_PGG8=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/british-actress-emilia-clarke-attends-the-last-christmas-premiere-at-picture-id1177709764?k=6&amp;m=1177709764&amp;s=612x612&amp;w=0&amp;h=W-BRutWlX8fe3DTBKF-Obu2hURRItWZT3iEN3Tv54Js=" target="_blank"> <img src="https://media.gettyimages.com/photos/british-actress-emilia-clarke-attends-the-last-christmas-premiere-at-picture-id1177709764?k=6&amp;m=1177709764&amp;s=612x612&amp;w=0&amp;h=W-BRutWlX8fe3DTBKF-Obu2hURRItWZT3iEN3Tv54Js=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-hbos-post-emmy-awards-reception-at-the-at-picture-id1176509491?k=6&amp;m=1176509491&amp;s=612x612&amp;w=0&amp;h=q4Av0rH3fkayMUTFAUB7xV4pGQqg9CTMJINEVlF1uKc=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-hbos-post-emmy-awards-reception-at-the-at-picture-id1176509491?k=6&amp;m=1176509491&amp;s=612x612&amp;w=0&amp;h=q4Av0rH3fkayMUTFAUB7xV4pGQqg9CTMJINEVlF1uKc=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/actress-emilia-clarke-attends-lincoln-centers-american-songbook-gala-picture-id963636776?k=6&amp;m=963636776&amp;s=612x612&amp;w=0&amp;h=nzPr5zn5lkkbl-s2W-UuJG_KT_iAyk7ums_sgSpg560=" target="_blank"> <img src="https://media.gettyimages.com/photos/actress-emilia-clarke-attends-lincoln-centers-american-songbook-gala-picture-id963636776?k=6&amp;m=963636776&amp;s=612x612&amp;w=0&amp;h=nzPr5zn5lkkbl-s2W-UuJG_KT_iAyk7ums_sgSpg560=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176466293?k=6&amp;m=1176466293&amp;s=612x612&amp;w=0&amp;h=T4QxX4YZqPYWN-DtTeTfMQwky--snDEMIzvT9WHT5ls=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176466293?k=6&amp;m=1176466293&amp;s=612x612&amp;w=0&amp;h=T4QxX4YZqPYWN-DtTeTfMQwky--snDEMIzvT9WHT5ls=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176434853?k=6&amp;m=1176434853&amp;s=612x612&amp;w=0&amp;h=U0egJsQ3umPzTOy_vMSW3Lbitp-8Fj59aj10MB8JFi0=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176434853?k=6&amp;m=1176434853&amp;s=612x612&amp;w=0&amp;h=U0egJsQ3umPzTOy_vMSW3Lbitp-8Fj59aj10MB8JFi0=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-last-christmas-uk-premiere-at-bfi-southbank-picture-id1187016479?k=6&amp;m=1187016479&amp;s=612x612&amp;w=0&amp;h=SgdNmPjw9SyL-u4y1StwkcLUs4KpvXrpz7wrwq4OI9g=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-last-christmas-uk-premiere-at-bfi-southbank-picture-id1187016479?k=6&amp;m=1187016479&amp;s=612x612&amp;w=0&amp;h=SgdNmPjw9SyL-u4y1StwkcLUs4KpvXrpz7wrwq4OI9g=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-and-kit-harington-attend-the-game-of-thrones-season-8-picture-id1134775875?k=6&amp;m=1134775875&amp;s=612x612&amp;w=0&amp;h=Q2PrRqjXj4w7Nh4kjR9DR29a2_j46qjmGfX9cqKEBFI=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-and-kit-harington-attend-the-game-of-thrones-season-8-picture-id1134775875?k=6&amp;m=1134775875&amp;s=612x612&amp;w=0&amp;h=Q2PrRqjXj4w7Nh4kjR9DR29a2_j46qjmGfX9cqKEBFI=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-2019-vanity-fair-oscar-party-hosted-by-radhika-picture-id1132003883?k=6&amp;m=1132003883&amp;s=612x612&amp;w=0&amp;h=TBO6EgBHktF9jln5r-8TM-U4RhkR89CIKgqQCHsg2qA=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-2019-vanity-fair-oscar-party-hosted-by-radhika-picture-id1132003883?k=6&amp;m=1132003883&amp;s=612x612&amp;w=0&amp;h=TBO6EgBHktF9jln5r-8TM-U4RhkR89CIKgqQCHsg2qA=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-2019-time-100-gala-at-frederick-p-rose-hall-picture-id1139000631?k=6&amp;m=1139000631&amp;s=612x612&amp;w=0&amp;h=V6cgmPrks5wVJxZ9MFxmpqoGoQ20Pf60OExWlJCbrjE=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-2019-time-100-gala-at-frederick-p-rose-hall-picture-id1139000631?k=6&amp;m=1139000631&amp;s=612x612&amp;w=0&amp;h=V6cgmPrks5wVJxZ9MFxmpqoGoQ20Pf60OExWlJCbrjE=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/episode-1147-pictured-actress-emilia-clarke-during-an-interview-on-picture-id1179081539?k=6&amp;m=1179081539&amp;s=612x612&amp;w=0&amp;h=Bj6W4z6KySMdEPRoTnmGH3QFAyevvoZKeJeJyb-9jYU=" target="_blank"> <img src="https://media.gettyimages.com/photos/episode-1147-pictured-actress-emilia-clarke-during-an-interview-on-picture-id1179081539?k=6&amp;m=1179081539&amp;s=612x612&amp;w=0&amp;h=Bj6W4z6KySMdEPRoTnmGH3QFAyevvoZKeJeJyb-9jYU=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-universal-pictures-premiere-of-last-at-amc-picture-id1184282433?k=6&amp;m=1184282433&amp;s=612x612&amp;w=0&amp;h=Rkl0xyLegljW0oYJVCTlURWErSq4drQYww7Uj1m3du0=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-universal-pictures-premiere-of-last-at-amc-picture-id1184282433?k=6&amp;m=1184282433&amp;s=612x612&amp;w=0&amp;h=Rkl0xyLegljW0oYJVCTlURWErSq4drQYww7Uj1m3du0=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-91st-annual-academy-awards-at-hollywood-and-picture-id1127143736?k=6&amp;m=1127143736&amp;s=612x612&amp;w=0&amp;h=Tmg2VF7YUbX3tLwj4DCJNNVlF6srmgQsO8sp7Dd_lM0=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-91st-annual-academy-awards-at-hollywood-and-picture-id1127143736?k=6&amp;m=1127143736&amp;s=612x612&amp;w=0&amp;h=Tmg2VF7YUbX3tLwj4DCJNNVlF6srmgQsO8sp7Dd_lM0=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/actress-emilia-clarke-arrives-at-the-premiere-of-hbos-game-of-thrones-picture-id523896832?k=6&amp;m=523896832&amp;s=612x612&amp;w=0&amp;h=P2j38uC05lKfOUvfoE0E8wDMNP1cuzNu9q2QyY_HQNE=" target="_blank"> <img src="https://media.gettyimages.com/photos/actress-emilia-clarke-arrives-at-the-premiere-of-hbos-game-of-thrones-picture-id523896832?k=6&amp;m=523896832&amp;s=612x612&amp;w=0&amp;h=P2j38uC05lKfOUvfoE0E8wDMNP1cuzNu9q2QyY_HQNE=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/actress-emilia-clarke-attends-the-christian-dior-show-as-part-of-the-picture-id491012538?k=6&amp;m=491012538&amp;s=612x612&amp;w=0&amp;h=QtlfLs33Wn9vQS3pPekNzY-N3RXAoRINr6AurbyoPBk=" target="_blank"> <img src="https://media.gettyimages.com/photos/actress-emilia-clarke-attends-the-christian-dior-show-as-part-of-the-picture-id491012538?k=6&amp;m=491012538&amp;s=612x612&amp;w=0&amp;h=QtlfLs33Wn9vQS3pPekNzY-N3RXAoRINr6AurbyoPBk=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-arrives-at-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176510995?k=6&amp;m=1176510995&amp;s=612x612&amp;w=0&amp;h=5y8zPUUUI8JRdmbShxCYVrjwLp-aTgBb93G-k1gJWeg=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-arrives-at-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176510995?k=6&amp;m=1176510995&amp;s=612x612&amp;w=0&amp;h=5y8zPUUUI8JRdmbShxCYVrjwLp-aTgBb93G-k1gJWeg=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-takes-part-in-siriusxms-town-hall-with-the-cast-of-solo-picture-id961059654?k=6&amp;m=961059654&amp;s=612x612&amp;w=0&amp;h=hr7k76ePrzXj9yR9K2Y-umx0lqZ3-e8j_a6f_qgVmjA=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-takes-part-in-siriusxms-town-hall-with-the-cast-of-solo-picture-id961059654?k=6&amp;m=961059654&amp;s=612x612&amp;w=0&amp;h=hr7k76ePrzXj9yR9K2Y-umx0lqZ3-e8j_a6f_qgVmjA=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/actors-jason-momoa-and-emilia-clarke-arrive-at-the-premiere-of-hbos-picture-id163975190?k=6&amp;m=163975190&amp;s=612x612&amp;w=0&amp;h=TUJnUdZZgCnpZoi19l_8jhCJ-L2Z5OBcHonxHNn0WUA=" target="_blank"> <img src="https://media.gettyimages.com/photos/actors-jason-momoa-and-emilia-clarke-arrive-at-the-premiere-of-hbos-picture-id163975190?k=6&amp;m=163975190&amp;s=612x612&amp;w=0&amp;h=TUJnUdZZgCnpZoi19l_8jhCJ-L2Z5OBcHonxHNn0WUA=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-91st-annual-academy-awards-at-hollywood-and-picture-id1131886471?k=6&amp;m=1131886471&amp;s=612x612&amp;w=0&amp;h=7VbMYKw971ZMYGQU33QsNMfuNi-YSH6bWZpDUJd2m5g=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-91st-annual-academy-awards-at-hollywood-and-picture-id1131886471?k=6&amp;m=1131886471&amp;s=612x612&amp;w=0&amp;h=7VbMYKw971ZMYGQU33QsNMfuNi-YSH6bWZpDUJd2m5g=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-seen-returning-to-her-hotel-whilst-promoting-new-movie-picture-id1183146862?k=6&amp;m=1183146862&amp;s=612x612&amp;w=0&amp;h=13PvtN7_M_N5e1J6aEO8bgJ4iiYtD6im93T2mtZ6LNc=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-seen-returning-to-her-hotel-whilst-promoting-new-movie-picture-id1183146862?k=6&amp;m=1183146862&amp;s=612x612&amp;w=0&amp;h=13PvtN7_M_N5e1J6aEO8bgJ4iiYtD6im93T2mtZ6LNc=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-last-christmas-uk-premiere-at-bfi-southbank-picture-id1187002602?k=6&amp;m=1187002602&amp;s=612x612&amp;w=0&amp;h=iU4A9cbREPf8jK5wVamKdKgipGu0THabFSpkLuxHPHs=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-last-christmas-uk-premiere-at-bfi-southbank-picture-id1187002602?k=6&amp;m=1187002602&amp;s=612x612&amp;w=0&amp;h=iU4A9cbREPf8jK5wVamKdKgipGu0THabFSpkLuxHPHs=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/actress-emilia-clarke-of-don-hemingway-poses-at-the-guess-portrait-picture-id180142931?k=6&amp;m=180142931&amp;s=612x612&amp;w=0&amp;h=B5yodFZGtr9PIqCaLXmyi7gOUmwcLC3xpyCXVFXGnKk=" target="_blank"> <img src="https://media.gettyimages.com/photos/actress-emilia-clarke-of-don-hemingway-poses-at-the-guess-portrait-picture-id180142931?k=6&amp;m=180142931&amp;s=612x612&amp;w=0&amp;h=B5yodFZGtr9PIqCaLXmyi7gOUmwcLC3xpyCXVFXGnKk=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-arrives-at-the-fashion-awards-2019-held-at-royal-albert-picture-id1191505048?k=6&amp;m=1191505048&amp;s=612x612&amp;w=0&amp;h=BQR7gaR66eGGEZaWs58E4mzRrpjP-7cb-WcxlTj8WBI=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-arrives-at-the-fashion-awards-2019-held-at-royal-albert-picture-id1191505048?k=6&amp;m=1191505048&amp;s=612x612&amp;w=0&amp;h=BQR7gaR66eGGEZaWs58E4mzRrpjP-7cb-WcxlTj8WBI=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-arrives-at-the-fashion-awards-2019-held-at-royal-albert-picture-id1191520594?k=6&amp;m=1191520594&amp;s=612x612&amp;w=0&amp;h=AhwBQDHfsZQnVcEFWd_vp2lCyo8rQ8RjVNYnPHhTVv8=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-arrives-at-the-fashion-awards-2019-held-at-royal-albert-picture-id1191520594?k=6&amp;m=1191520594&amp;s=612x612&amp;w=0&amp;h=AhwBQDHfsZQnVcEFWd_vp2lCyo8rQ8RjVNYnPHhTVv8=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-hbos-post-emmy-awards-reception-on-september-22-picture-id1176508530?k=6&amp;m=1176508530&amp;s=612x612&amp;w=0&amp;h=DxSOr331swIJYA-ZLZO01RWWX8ju7ts-4JfehsQK6V4=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-hbos-post-emmy-awards-reception-on-september-22-picture-id1176508530?k=6&amp;m=1176508530&amp;s=612x612&amp;w=0&amp;h=DxSOr331swIJYA-ZLZO01RWWX8ju7ts-4JfehsQK6V4=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-siriusxm-town-hall-special-with-the-cast-of-picture-id1184204648?k=6&amp;m=1184204648&amp;s=612x612&amp;w=0&amp;h=SBWy0m9r9SuktdhluQZdkzbLDmJ09T0zArZh6n3x8w0=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-siriusxm-town-hall-special-with-the-cast-of-picture-id1184204648?k=6&amp;m=1184204648&amp;s=612x612&amp;w=0&amp;h=SBWy0m9r9SuktdhluQZdkzbLDmJ09T0zArZh6n3x8w0=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-hollywood-foreign-press-association-and-the-picture-id1187740652?k=6&amp;m=1187740652&amp;s=612x612&amp;w=0&amp;h=Fd8UWPEnTMgibBs1jyP5CL4oAbkz3O6NdImS_cCYoSA=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-hollywood-foreign-press-association-and-the-picture-id1187740652?k=6&amp;m=1187740652&amp;s=612x612&amp;w=0&amp;h=Fd8UWPEnTMgibBs1jyP5CL4oAbkz3O6NdImS_cCYoSA=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-last-christmas-uk-premiere-at-the-bfi-on-picture-id1186972483?k=6&amp;m=1186972483&amp;s=612x612&amp;w=0&amp;h=4Df5veJHZFeriiuEdSD_rwMhrxDF5Vs1L51_GfzEK1U=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-last-christmas-uk-premiere-at-the-bfi-on-picture-id1186972483?k=6&amp;m=1186972483&amp;s=612x612&amp;w=0&amp;h=4Df5veJHZFeriiuEdSD_rwMhrxDF5Vs1L51_GfzEK1U=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-91st-annual-academy-awards-at-hollywood-and-picture-id1131886492?k=6&amp;m=1131886492&amp;s=612x612&amp;w=0&amp;h=0a5Dh7h45A0Ri2gv0FSQUXmCONUYTE44sTBJ8fcvInY=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-91st-annual-academy-awards-at-hollywood-and-picture-id1131886492?k=6&amp;m=1131886492&amp;s=612x612&amp;w=0&amp;h=0a5Dh7h45A0Ri2gv0FSQUXmCONUYTE44sTBJ8fcvInY=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-2019-time-100-gala-at-frederick-p-rose-hall-picture-id1139000639?k=6&amp;m=1139000639&amp;s=612x612&amp;w=0&amp;h=wSWPMCqljemDKbx-CpvdRUG14ytlKr-0t8mCgnGim3w=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-2019-time-100-gala-at-frederick-p-rose-hall-picture-id1139000639?k=6&amp;m=1139000639&amp;s=612x612&amp;w=0&amp;h=wSWPMCqljemDKbx-CpvdRUG14ytlKr-0t8mCgnGim3w=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-arrives-at-the-fashion-awards-2019-held-at-royal-albert-picture-id1191503429?k=6&amp;m=1191503429&amp;s=612x612&amp;w=0&amp;h=fba24XD5ZN5LlCgmf0elGbX74UEVQYH1NeNoIQzuLwo=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-arrives-at-the-fashion-awards-2019-held-at-royal-albert-picture-id1191503429?k=6&amp;m=1191503429&amp;s=612x612&amp;w=0&amp;h=fba24XD5ZN5LlCgmf0elGbX74UEVQYH1NeNoIQzuLwo=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176437373?k=6&amp;m=1176437373&amp;s=612x612&amp;w=0&amp;h=EsJQEsYeDER3dzFu2CpQ3kzBSV3lfGxZfTTr1R4qT3k=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176437373?k=6&amp;m=1176437373&amp;s=612x612&amp;w=0&amp;h=EsJQEsYeDER3dzFu2CpQ3kzBSV3lfGxZfTTr1R4qT3k=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-2019-time-100-gala-at-frederick-p-rose-hall-picture-id1139000641?k=6&amp;m=1139000641&amp;s=612x612&amp;w=0&amp;h=SS5jdKQNmWrzafuT0gJ6lZIhD3B0bJGUdrpE-5_Dosg=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-2019-time-100-gala-at-frederick-p-rose-hall-picture-id1139000641?k=6&amp;m=1139000641&amp;s=612x612&amp;w=0&amp;h=SS5jdKQNmWrzafuT0gJ6lZIhD3B0bJGUdrpE-5_Dosg=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-91st-annual-academy-awards-at-hollywood-and-picture-id1127143730?k=6&amp;m=1127143730&amp;s=612x612&amp;w=0&amp;h=vSLqjAUepdifhJIDLiZK-x0HYJmgD24M0LkvlnDxqR0=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-91st-annual-academy-awards-at-hollywood-and-picture-id1127143730?k=6&amp;m=1127143730&amp;s=612x612&amp;w=0&amp;h=vSLqjAUepdifhJIDLiZK-x0HYJmgD24M0LkvlnDxqR0=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-last-christmas-uk-premiere-at-the-bfi-on-picture-id1186983381?k=6&amp;m=1186983381&amp;s=612x612&amp;w=0&amp;h=QWeTr1l6a-oFdmxnWOHuKxbS9gki0Epgfqnrpe-xepo=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-last-christmas-uk-premiere-at-the-bfi-on-picture-id1186983381?k=6&amp;m=1186983381&amp;s=612x612&amp;w=0&amp;h=QWeTr1l6a-oFdmxnWOHuKxbS9gki0Epgfqnrpe-xepo=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176440306?k=6&amp;m=1176440306&amp;s=612x612&amp;w=0&amp;h=_2IOcYcC22BEB_s91pOZgBf8Iixd3hpXwWE8Xw4Hl3s=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176440306?k=6&amp;m=1176440306&amp;s=612x612&amp;w=0&amp;h=_2IOcYcC22BEB_s91pOZgBf8Iixd3hpXwWE8Xw4Hl3s=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-2018-british-academy-britannia-awards-by-picture-id1054072942?k=6&amp;m=1054072942&amp;s=612x612&amp;w=0&amp;h=_NtjMdeeUGuYvMQspCKCyaEn8NKEN2sJ4VBXE5Vnwkc=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-2018-british-academy-britannia-awards-by-picture-id1054072942?k=6&amp;m=1054072942&amp;s=612x612&amp;w=0&amp;h=_NtjMdeeUGuYvMQspCKCyaEn8NKEN2sJ4VBXE5Vnwkc=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-is-seen-on-may-01-2019-in-los-angeles-california-picture-id1140697690?k=6&amp;m=1140697690&amp;s=612x612&amp;w=0&amp;h=QkhEZsco9vl2BQca4IHRtATyOaCjYnbq0KB8Vfpb6lk=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-is-seen-on-may-01-2019-in-los-angeles-california-picture-id1140697690?k=6&amp;m=1140697690&amp;s=612x612&amp;w=0&amp;h=QkhEZsco9vl2BQca4IHRtATyOaCjYnbq0KB8Vfpb6lk=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176434852?k=6&amp;m=1176434852&amp;s=612x612&amp;w=0&amp;h=lZZaEwbECetEaZQXqMUdWK-HfP0FNrGgyRln7sQGSdg=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176434852?k=6&amp;m=1176434852&amp;s=612x612&amp;w=0&amp;h=lZZaEwbECetEaZQXqMUdWK-HfP0FNrGgyRln7sQGSdg=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-arrives-at-the-ee-british-academy-film-awards-2020-at-picture-id1198171463?k=6&amp;m=1198171463&amp;s=612x612&amp;w=0&amp;h=GIJlSN_2IZqFZYTEiMjzA91a-YCnBZeemc7PeWBt1Bo=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-arrives-at-the-ee-british-academy-film-awards-2020-at-picture-id1198171463?k=6&amp;m=1198171463&amp;s=612x612&amp;w=0&amp;h=GIJlSN_2IZqFZYTEiMjzA91a-YCnBZeemc7PeWBt1Bo=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/actress-emilia-clarke-attends-the-2016-vanity-fair-oscar-party-hosted-picture-id512948186?k=6&amp;m=512948186&amp;s=612x612&amp;w=0&amp;h=4Z6bOb1de7HVMzfat8HV0KYKmApAq8xWNy-vYZswdfI=" target="_blank"> <img src="https://media.gettyimages.com/photos/actress-emilia-clarke-attends-the-2016-vanity-fair-oscar-party-hosted-picture-id512948186?k=6&amp;m=512948186&amp;s=612x612&amp;w=0&amp;h=4Z6bOb1de7HVMzfat8HV0KYKmApAq8xWNy-vYZswdfI=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-ee-british-academy-film-awards-2020-at-picture-id1203584486?k=6&amp;m=1203584486&amp;s=612x612&amp;w=0&amp;h=NQQmKuMhhgBmENuvuiPIvd1aTy5JSCTN3d_Tdg0HlTo=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-ee-british-academy-film-awards-2020-at-picture-id1203584486?k=6&amp;m=1203584486&amp;s=612x612&amp;w=0&amp;h=NQQmKuMhhgBmENuvuiPIvd1aTy5JSCTN3d_Tdg0HlTo=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-hfpa-and-thr-golden-globe-ambassador-party-picture-id1187740625?k=6&amp;m=1187740625&amp;s=612x612&amp;w=0&amp;h=bOBqxae2LRg15NdNi5brrp1anA7ufAActTNtYS2qt4w=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-hfpa-and-thr-golden-globe-ambassador-party-picture-id1187740625?k=6&amp;m=1187740625&amp;s=612x612&amp;w=0&amp;h=bOBqxae2LRg15NdNi5brrp1anA7ufAActTNtYS2qt4w=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176445634?k=6&amp;m=1176445634&amp;s=612x612&amp;w=0&amp;h=P6Uz7izAhZUtKK6W15slcUD6SjKEecwVrRGWIRayk8c=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-71st-emmy-awards-at-microsoft-theater-on-picture-id1176445634?k=6&amp;m=1176445634&amp;s=612x612&amp;w=0&amp;h=P6Uz7izAhZUtKK6W15slcUD6SjKEecwVrRGWIRayk8c=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/actor-emilia-clarke-attends-the-75th-annual-golden-globe-awards-at-picture-id902364850?k=6&amp;m=902364850&amp;s=612x612&amp;w=0&amp;h=wjv6DZxgSdYrBK1sLk82Sv8-Aakm11inKEnsUewubaw=" target="_blank"> <img src="https://media.gettyimages.com/photos/actor-emilia-clarke-attends-the-75th-annual-golden-globe-awards-at-picture-id902364850?k=6&amp;m=902364850&amp;s=612x612&amp;w=0&amp;h=wjv6DZxgSdYrBK1sLk82Sv8-Aakm11inKEnsUewubaw=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/nathalie-emmanuel-emilia-clarke-and-sophie-turner-attend-the-game-of-picture-id1134777661?k=6&amp;m=1134777661&amp;s=612x612&amp;w=0&amp;h=mxyNdTgiI5tcue1t33MtmHderj80zIeFyj109w09Y0w=" target="_blank"> <img src="https://media.gettyimages.com/photos/nathalie-emmanuel-emilia-clarke-and-sophie-turner-attend-the-game-of-picture-id1134777661?k=6&amp;m=1134777661&amp;s=612x612&amp;w=0&amp;h=mxyNdTgiI5tcue1t33MtmHderj80zIeFyj109w09Y0w=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/75th-annual-golden-globe-awards-pictured-actor-emilia-clarke-arrives-picture-id902364406?k=6&amp;m=902364406&amp;s=612x612&amp;w=0&amp;h=1vF2oz7QwuyWM0pNwg-Fsmg8pFTmK7ntuBzJyMmbRFI=" target="_blank"> <img src="https://media.gettyimages.com/photos/75th-annual-golden-globe-awards-pictured-actor-emilia-clarke-arrives-picture-id902364406?k=6&amp;m=902364406&amp;s=612x612&amp;w=0&amp;h=1vF2oz7QwuyWM0pNwg-Fsmg8pFTmK7ntuBzJyMmbRFI=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/rose-leslie-and-emilia-clarke-attend-the-game-of-thrones-season-8-picture-id1140258900?k=6&amp;m=1140258900&amp;s=612x612&amp;w=0&amp;h=2mAWvoq4vE5Zbi0PwU3LyGyXQ2KyQbcGwhnjKNd7u8M=" target="_blank"> <img src="https://media.gettyimages.com/photos/rose-leslie-and-emilia-clarke-attend-the-game-of-thrones-season-8-picture-id1140258900?k=6&amp;m=1140258900&amp;s=612x612&amp;w=0&amp;h=2mAWvoq4vE5Zbi0PwU3LyGyXQ2KyQbcGwhnjKNd7u8M=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/british-actress-emilia-clarke-arrives-for-the-71st-emmy-awards-at-the-picture-id1170290633?k=6&amp;m=1170290633&amp;s=612x612&amp;w=0&amp;h=2nRUdJHFU07BFR-_kV849VrqW_-9V6fCAJIGDczQB2U=" target="_blank"> <img src="https://media.gettyimages.com/photos/british-actress-emilia-clarke-arrives-for-the-71st-emmy-awards-at-the-picture-id1170290633?k=6&amp;m=1170290633&amp;s=612x612&amp;w=0&amp;h=2nRUdJHFU07BFR-_kV849VrqW_-9V6fCAJIGDczQB2U=" alt="" width="100%">  </a>
+      
+      
+      
+      <a href="https://media.gettyimages.com/photos/emilia-clarke-attends-the-universal-pictures-premiere-of-last-at-amc-picture-id1184282419?k=6&amp;m=1184282419&amp;s=612x612&amp;w=0&amp;h=r-JzcSbzyLuWit5TBPBG3P3a2-sBoRdgbPEEgjDuehM=" target="_blank"> <img src="https://media.gettyimages.com/photos/emilia-clarke-attends-the-universal-pictures-premiere-of-last-at-amc-picture-id1184282419?k=6&amp;m=1184282419&amp;s=612x612&amp;w=0&amp;h=r-JzcSbzyLuWit5TBPBG3P3a2-sBoRdgbPEEgjDuehM=" alt="" width="100%">  </a>
+      
+      
+      
+      
+    </div>
+    
+    
+    </div>
+  </div>
+
+  <!-- MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN MAIN -->
+<!-- AVERAGE FOOTER-->
+<div class="footer">
+  <p>All Copyrights To The Website Owned By <a style="color: aqua;" href="https://github.com/rishav-jha-mech/" target="_blank"> <span style="color: chartreuse;font-weight: 600;">Rishav Jha 👑</span> </a></p>
+  </div>
+<!-- AVERAGE FOOTER-->
+
+</body>
+<script src="veronica.js">
+
+</script>
+</html>

@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: aqua;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: blue;
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aqua;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    padding: 0 30%  0 30%;
+    background-color: black;
+}
+.cunt{
+    min-height: 100vh;
+    width: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 80px;
+    text-align: center;
+}
+.cunt img, .cunt video {
+    width: 97%;
+    max-height: 350px;
+    margin: 25px 5px 25px 5px;
+    border: 2px solid aqua;
+}
+@media(max-width:600px){
+    
+    body{
+        padding: 0;
+    }
+    
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: aqua;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: blue;
+  }
+
+
+}
+h2{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-transform: capitalize;
+    font-weight: 800;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 40px;
+}
+p{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+p:nth-child(5){
+    font-size: 15px !important;
+    color: chartreuse;
+}
+a{
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.threebuttons{
+    margin: 25px 0 25px 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%
+}
+.threebuttons a{
+    font-size: 16px;
+    padding: 12px;
+    font-weight: 700;
+    color: aqua;
+    border-radius: 8px;
+    border: 2px solid aqua;
+}
+.threebuttons a:hover{
+    color: chartreuse;
+    border: 2px solid chartreuse;
+}
+@media(max-width:600px){
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    .threebuttons{
+        flex-direction: column;
+    }
+    .threebuttons a{
+        margin: 12px 20% 12px 20%;
+    }
+}
+@media(max-width:1150px){
+    body{
+        padding: 0 15% 0 15% !important;
+    }
+}
+
+@media(max-width:700px){
+    body{
+        padding: 0 12% 0 12% !important;
+    }
+}
